@@ -157,13 +157,14 @@ void RedBlackTree::printTreeHelper(Node *root, int space) const {
         std::cout << " ";
     }
 
-    std::cout << root->data << "(" << (root->color == RED ? "RED" : "BLACK") << ")" << std::endl;
+    std::cout << "(" << root->data << "(" << (root->color == RED ? "RED" : "BLACK") << "))";
 
     printTreeHelper(root->left, space);
 }
 
 void RedBlackTree::printTree() const {
     printTreeHelper(root, 0);
+    std::cout << std::endl;
 }
 
 int main() {
@@ -185,3 +186,4 @@ int main() {
 
     return 0;
 }
+
